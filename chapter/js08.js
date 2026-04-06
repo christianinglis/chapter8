@@ -58,6 +58,16 @@ function playDrawPoker() {
          
          for(let i = 0; i < cardImages.length; i++) {
             cardImages[i].src = myHand.cards[i].cardImage();
+
+            cardImages[i].onclick = function() {
+               if (this.src.includes("cardback.png")) {
+
+                  this.src = myHand.cards[i].cardImage();
+               } else {
+
+                  this.src = "cardback.png";
+               }
+            }
          }
       } else {
          statusBox.textContent = "Insufficient Funds";

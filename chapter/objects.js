@@ -59,6 +59,10 @@
          this.cards = new Array(handLength);
       }
 
+   pokerHand.prototype.replaceCard = function(index, pokerDeck) {
+      this.cards[index] = pokerDeck.cards.shift();
+   };
+
 
 
 
