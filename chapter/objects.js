@@ -25,6 +25,10 @@
       this.rank = cardRank;
    }
 
+   pokerCard.prototype.cardImage = function() {
+      return this.rank + "_" + this.suit + ".png";
+   };
+
 
    function pokerDeck() {
       let suits = ["clubs", "diamonds", "hearts", "spades"];

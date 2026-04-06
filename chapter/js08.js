@@ -46,6 +46,14 @@ function playDrawPoker() {
          statusBox.textContent = "";        // Erase any status messages
 
          bankBox.value = pokerGame.placeBet();
+
+         if (myDeck.cards.length < 10) {
+            myDeck = new pokerDeck();
+            myDeck.shuffle();
+         }
+
+         myDeck.dealTo(myHand);
+         console.log(myDeck, myHand)
       } else {
          statusBox.textContent = "Insufficient Funds";
       }
