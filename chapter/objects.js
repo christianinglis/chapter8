@@ -44,7 +44,14 @@
             return 0.5 - Math.random();
          });
       };
+
+      this.dealTo = function(pokerHand) {
+         let cardsDealth = pokerHand.cards.length;
+         pokerHand.cards = this.card.splice(0, cardsDealt);
+      };
    };
+
+
 
 
 
