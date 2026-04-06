@@ -20,7 +20,7 @@
       }
    };
 
-   function pokerCard(cardSuit, cardBank) {
+   function pokerCard(cardSuit, cardRank) {
       this.suit = cardSuit;
       this.rank = cardRank;
    }
@@ -39,7 +39,7 @@
       for (let i = 0; i < 4; i++) {
          for (let j = 0; j < 13; j++) {
 
-            this.card.push(new pokerCard(suits[i], ranks[j]));
+            this.cards.push(new pokerCard(suits[i], ranks[j]));
          }
       }
 
@@ -50,10 +50,14 @@
       };
 
       this.dealTo = function(pokerHand) {
-         let cardsDealth = pokerHand.cards.length;
-         pokerHand.cards = this.card.splice(0, cardsDealt);
+         let cardsDealt = pokerHand.cards.length;
+         pokerHand.cards = this.cards.splice(0, cardsDealt);
       };
    };
+
+   function pokerHand(handLength) {
+         this.cards = new Array(handLength);
+      }
 
 
 

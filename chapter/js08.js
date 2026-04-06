@@ -29,6 +29,8 @@ function playDrawPoker() {
    let myDeck = new pokerDeck();
    myDeck.shuffle();
 
+   let myHand = new pokerHand(5);
+
    bankBox.value = pokerGame.currentBank;
 
    betSelection.onchange = function() {
@@ -53,7 +55,10 @@ function playDrawPoker() {
          }
 
          myDeck.dealTo(myHand);
-         console.log(myDeck, myHand)
+         
+         for(let i = 0; i < cardImages.length; i++) {
+            cardImages[i].src = myHand.cards[i].cardImage();
+         }
       } else {
          statusBox.textContent = "Insufficient Funds";
       }
