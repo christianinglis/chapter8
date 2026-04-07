@@ -61,42 +61,9 @@
 
    pokerHand.prototype.replaceCard = function(index, pokerDeck) {
       this.cards[index] = pokerDeck.cards.shift();
-   };
+   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
-   /* ------------------------------------------------+
-   | The handType() function returns a text string of |
-   | the type of hand held by 5-card poker hand.      |
-   +-------------------------------------------------*/
-   function handType(pokerHand) {       
+      function handType(pokerHand) {       
       /* Determine the rank value of each card in the hand
          by creating a property named rankValue         */
       for (let i = 0; i < pokerHand.cards.length; i++) {
@@ -200,8 +167,43 @@
          let sets = hasSets();
          if (sets === "Pair" || sets === "none") {sets = "No Winner";}
          return sets;
-      }   
+      }
    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   /* ------------------------------------------------+
+   | The handType() function returns a text string of |
+   | the type of hand held by 5-card poker hand.      |
+   +-------------------------------------------------*/
+      
    /* ------------------------------------------------+
    |             End of the  handType() function      |
    +-------------------------------------------------*/   
